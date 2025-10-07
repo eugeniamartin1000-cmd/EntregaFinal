@@ -1,0 +1,13 @@
+@use "utilidades/variables" as *;
+@use "utilidades/mixin" as *;
+
+
+
+// Reset general
+body, html, header {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
