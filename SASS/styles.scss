@@ -316,7 +316,7 @@
 
   .categoria-item {
     flex: 0 0 auto;
-    width: calc(100vw / 10); // ajustado para 10 categorías
+    width: calc(100vw / 10); 
     text-align: center;
     scroll-snap-align: start;
     padding: 0;
@@ -335,8 +335,8 @@
     }
 
     img {
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
       object-fit: contain;
       margin: 0 auto 5px;
 
@@ -377,7 +377,7 @@
   .productos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: clamp(20px, 5vw, 80px); // se adapta al ancho de pantalla
+    gap: clamp(20px, 5vw, 80px); 
     padding-top: 10px;
     margin: 40px;
 
@@ -619,5 +619,183 @@
 
 
 
+/*categorias secundario*/
+
+.categorias_secundario {
+  background-color: $light-pink-color;
+  padding: 30px 0;
+  padding-bottom: 30px;
+
+  .categorias-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-inline: 0;
+    gap: 0;
+    width: 100%;
+
+    @media (max-width: 1092px) {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+    gap: 0;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .categoria-item {
+    flex: 0 0 auto;
+    width: calc(100vw / 12);
+    text-align: center;
+    scroll-snap-align: start;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.3s ease;
+
+    @media (max-width: 1092px) {
+    flex: 0 0 auto;
+    width: calc(100vw / 5); 
+    padding: 0;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      z-index: 1;
+    }
+
+    img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      margin: 0 auto 5px;
+
+      @media (max-width: 1092px) {
+        max-width: 80px;
+      }
+    }
+
+    p {
+      @include main-text($hot-pink-color, 0.875rem);
+      font-weight: 300;
+      margin: 0;
+
+      @media (max-width: 1092px) {
+        transform: none;
+        z-index: unset;
+      }
+    }
+}
+}
 
 
+
+//todos los prouctos
+
+.todos-productos {
+  background-color: $light-pink-color;
+  padding: 40px 0;
+
+  .titulo-todos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1rem;
+
+  
+  .titulo-seccion-todos {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 500;
+    color: $hot-pink-color;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  }
+
+  .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: clamp(30px, 4vw, 30px); 
+    padding-top: 10px;
+    margin: 40px;
+
+    @media (max-width: 768px) {
+      margin: 20px;
+    }
+  }
+
+  .producto-card {
+    background-color: $light-pink-color;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .info-producto {
+      padding: 15px;
+      text-align: center;
+      justify-content: baseline;
+
+      h3 {
+        font-size: 1rem;
+        color: $hot-pink-color;
+        margin-bottom: 5px;
+      }
+
+      .precio {
+        font-size: 0.9rem;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .btn-agregar {
+        background-color: $purple-color;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: $hot-pink-color;
+        }
+      }
+    }
+  }
+
+  .ver-todos {
+    text-align: center;
+    margin-top: 1rem;
+
+    .ver-link {
+      color: $hot-pink-color;
+      font-weight: 500;
+      text-decoration: underline;
+      font-size: 1rem;
+    }
+  }
+}

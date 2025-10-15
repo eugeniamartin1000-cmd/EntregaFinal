@@ -301,8 +301,8 @@
   z-index: 1;
 }
 .categorias .categoria-item img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   margin: 0 auto 5px;
 }
@@ -567,6 +567,169 @@
 }
 .todos-los-productos .top-section {
   color: #d57093;
+}
+
+/*categorias secundario*/
+.categorias_secundario {
+  background-color: #fce8e3;
+  padding: 30px 0;
+  padding-bottom: 30px;
+}
+.categorias_secundario .categorias-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-inline: 0;
+  gap: 0;
+  width: 100%;
+}
+@media (max-width: 1092px) {
+  .categorias_secundario .categorias-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+    gap: 0;
+  }
+}
+.categorias_secundario .categorias-scroll::-webkit-scrollbar {
+  display: none;
+}
+.categorias_secundario .categoria-item {
+  flex: 0 0 auto;
+  width: 8.3333333333vw;
+  text-align: center;
+  scroll-snap-align: start;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+@media (max-width: 1092px) {
+  .categorias_secundario .categoria-item {
+    flex: 0 0 auto;
+    width: 20vw;
+    padding: 0;
+  }
+}
+.categorias_secundario .categoria-item:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+.categorias_secundario .categoria-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin: 0 auto 5px;
+}
+@media (max-width: 1092px) {
+  .categorias_secundario .categoria-item img {
+    max-width: 80px;
+  }
+}
+.categorias_secundario .categoria-item p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #d57093;
+  font-size: 0.875rem;
+  font-weight: 300;
+  margin: 0;
+}
+@media (max-width: 1092px) {
+  .categorias_secundario .categoria-item p {
+    transform: none;
+    z-index: unset;
+  }
+}
+
+.todos-productos {
+  background-color: #fce8e3;
+  padding: 40px 0;
+}
+.todos-productos .titulo-todos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+}
+.todos-productos .titulo-todos .titulo-seccion-todos {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 500;
+  color: #d57093;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.todos-productos .productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: clamp(30px, 4vw, 30px);
+  padding-top: 10px;
+  margin: 40px;
+}
+@media (max-width: 768px) {
+  .todos-productos .productos-grid {
+    margin: 20px;
+  }
+}
+.todos-productos .producto-card {
+  background-color: #fce8e3;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.todos-productos .producto-card:hover {
+  transform: scale(1.05);
+}
+.todos-productos .producto-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.todos-productos .producto-card .info-producto {
+  padding: 15px;
+  text-align: center;
+  justify-content: baseline;
+}
+.todos-productos .producto-card .info-producto h3 {
+  font-size: 1rem;
+  color: #d57093;
+  margin-bottom: 5px;
+}
+.todos-productos .producto-card .info-producto .precio {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+.todos-productos .producto-card .info-producto .btn-agregar {
+  background-color: #d9b2e3;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.todos-productos .producto-card .info-producto .btn-agregar:hover {
+  background-color: #d57093;
+}
+.todos-productos .ver-todos {
+  text-align: center;
+  margin-top: 1rem;
+}
+.todos-productos .ver-todos .ver-link {
+  color: #d57093;
+  font-weight: 500;
+  text-decoration: underline;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */
